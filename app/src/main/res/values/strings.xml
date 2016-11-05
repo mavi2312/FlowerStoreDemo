@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Flower Store Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="buy_btn">Buy</string>
+    <string name="view_btn">View</string>
+    <string name="title_activity_product_categories">ProductCategoriesActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_to_cart">Add to cart</string>
+
+    <string-array name="quantity_array">
+        <item>1 rose</item>
+        <item>2 roses</item>
+        <item>3 roses</item>
+        <item>4 roses</item>
+        <item>5 roses</item>
+        <item>6 roses</item>
+        <item>7 roses</item>
+        <item>8 roses</item>
+    </string-array>
+
+</resources>

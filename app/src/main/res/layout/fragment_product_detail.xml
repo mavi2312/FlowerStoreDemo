@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mavzapps.flowerstoredemo.Fragments.ProductDetailFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productImageView"
+                android:adjustViewBounds="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/red_roses_inner_product1"
+                />
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:id="@+id/productGallery"
+                android:visibility="gone"
+                android:layout_height="270dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productImageView"
+                android:id="@+id/productInfo"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Red Roses"
+                    android:id="@+id/productName"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/primaryTextColor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From $10.00"
+                    android:id="@+id/productPrice"
+                    android:layout_below="@id/productName"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondaryTextColor"
+                    />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productPrice"
+                    android:isIndicator="true"
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:numStars="5"
+                    android:rating="4" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quantitySpinner"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="20dp"
+                    android:spinnerMode="dialog"/>
+
+                <!--LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/quantity">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_remove_circle_black_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:id="@+id/addBtn"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/quantityLbl"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="1"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_add_circle_black_24dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="15dp"
+                        android:id="@+id/removeBtn"/>
+                </LinearLayout-->
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_to_cart"
+                    android:id="@+id/addToCartBtn"
+                    android:layout_alignParentEnd="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_below="@id/quantitySpinner"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ratingBar"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productInfo"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deals"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dealsList"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
